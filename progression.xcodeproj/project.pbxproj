@@ -17,6 +17,8 @@
 		A71E2D15284CE626009D4ABB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71E2CEB284CE626009D4ABB /* ContentView.swift */; };
 		A71E2D16284CE626009D4ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71E2CEC284CE626009D4ABB /* Assets.xcassets */; };
 		A71E2D17284CE626009D4ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A71E2CEC284CE626009D4ABB /* Assets.xcassets */; };
+		A7C0F400285F70610097FC8B /* MusicTheory in Frameworks */ = {isa = PBXBuildFile; productRef = A7C0F3FF285F70610097FC8B /* MusicTheory */; };
+		A7EDFDE6285F637E0075224E /* AudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = A7EDFDE5285F637E0075224E /* AudioKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A703C24A285F6DC0006A0476 /* progression (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "progression (iOS).entitlements"; sourceTree = "<group>"; };
 		A71E2CEA284CE626009D4ABB /* progressionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = progressionApp.swift; sourceTree = "<group>"; };
 		A71E2CEB284CE626009D4ABB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A71E2CEC284CE626009D4ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +52,7 @@
 		A71E2D0A284CE626009D4ABB /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A71E2D0E284CE626009D4ABB /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		A71E2D10284CE626009D4ABB /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		A7EDFDE7285F699E0075224E /* progression--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "progression--iOS--Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7EDFDE6285F637E0075224E /* AudioKit in Frameworks */,
+				A7C0F400285F70610097FC8B /* MusicTheory in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +92,8 @@
 		A71E2CE4284CE626009D4ABB = {
 			isa = PBXGroup;
 			children = (
+				A703C24A285F6DC0006A0476 /* progression (iOS).entitlements */,
+				A7EDFDE7285F699E0075224E /* progression--iOS--Info.plist */,
 				A71E2CE9284CE626009D4ABB /* Shared */,
 				A71E2CF8284CE626009D4ABB /* macOS */,
 				A71E2D01284CE626009D4ABB /* Tests iOS */,
@@ -157,6 +165,10 @@
 			dependencies = (
 			);
 			name = "progression (iOS)";
+			packageProductDependencies = (
+				A7EDFDE5285F637E0075224E /* AudioKit */,
+				A7C0F3FF285F70610097FC8B /* MusicTheory */,
+			);
 			productName = "progression (iOS)";
 			productReference = A71E2CF1284CE626009D4ABB /* progression.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +261,10 @@
 				Base,
 			);
 			mainGroup = A71E2CE4284CE626009D4ABB;
+			packageReferences = (
+				A7EDFDE4285F637E0075224E /* XCRemoteSwiftPackageReference "AudioKit" */,
+				A7C0F3FE285F70610097FC8B /* XCRemoteSwiftPackageReference "MusicTheory" */,
+			);
 			productRefGroup = A71E2CF2284CE626009D4ABB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -461,16 +477,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "progression (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4LZ37SSFA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "progression--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -479,6 +498,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.danta.progression;
 				PRODUCT_NAME = progression;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -490,16 +510,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "progression (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = R4LZ37SSFA;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "progression--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,6 +531,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.danta.progression;
 				PRODUCT_NAME = progression;
 				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -691,6 +715,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A7C0F3FE285F70610097FC8B /* XCRemoteSwiftPackageReference "MusicTheory" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/cemolcay/MusicTheory.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		A7EDFDE4285F637E0075224E /* XCRemoteSwiftPackageReference "AudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A7C0F3FF285F70610097FC8B /* MusicTheory */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A7C0F3FE285F70610097FC8B /* XCRemoteSwiftPackageReference "MusicTheory" */;
+			productName = MusicTheory;
+		};
+		A7EDFDE5285F637E0075224E /* AudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A7EDFDE4285F637E0075224E /* XCRemoteSwiftPackageReference "AudioKit" */;
+			productName = AudioKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A71E2CE5284CE626009D4ABB /* Project object */;
 }
